@@ -6,8 +6,12 @@
     "classnames": "^2.2.6",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "formik": "^1.5.8",
     "react": "^16.8.6",
+    "react-background-video-player": "^1.1.6",
     "react-dom": "^16.8.6",
+    "react-modal": "^3.9.1",
+    "react-phone-number-input": "^2.3.21",
     "react-scripts": "3.0.1",
     "react-test-renderer": "^16.8.6"
   },
