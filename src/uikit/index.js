@@ -1,0 +1,7 @@
+export { default as Button } from './Button'
+export { default as Form } from './Form'
+export { default as Heading } from './Heading'
+export { default as Input } from './Input'
+export { default as Paragraph } from './Paragraph'
+export { default as Phone } from './Phone'
+export { default as Select } from './Select'
