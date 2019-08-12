@@ -1,1 +1,1 @@
-import { default } from './Heading.jsx'
+export { default } from './Heading'
