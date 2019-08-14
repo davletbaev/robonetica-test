@@ -1,10 +1,11 @@
 import React from 'react'
 
+import styles from './Logo.module.scss'
 import { ReactComponent as LogoImage } from './Logo.svg'
 
 const Logo = () => {
   return (
-    <div>
+    <div className={ styles['logo'] }>
       <a href="/" title="Go to Beginning">
         <LogoImage />
       </a>
