@@ -1,0 +1,28 @@
+@import 'fonts';
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  font-family: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Helvetica Now Text", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+#root {
+  height: 100%;
+}
