@@ -1,6 +1,7 @@
 export { default as Header } from './Header'
 export { default as Logo } from './Logo'
 export { default as Nav } from './Nav'
+export { default as Layout } from './Layout'
 export { default as Socials } from './Socials'
 export { default as Partners } from './Partners'
 export { default as BackgroundVideo } from './BackgroundVideo'
