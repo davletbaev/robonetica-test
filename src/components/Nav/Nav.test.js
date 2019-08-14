@@ -16,4 +16,8 @@ describe('Nav component', () => {
   it('wrapped by nav tag', () => {
     expect(wrapper.is('nav')).toBeTruthy()
   })
+
+  it('contains multiple A element', () => {
+    expect(wrapper.find('a').length).toBeGreaterThan(0)
+  })
 })
