@@ -1,10 +1,12 @@
 import React from 'react'
 
+import styles from './Header.module.scss'
+
 const Header = ({
   children
 }) => {
   return (
-    <header>{ children }</header>
+    <header className={ styles['header'] }>{ children }</header>
   )
 }
 
