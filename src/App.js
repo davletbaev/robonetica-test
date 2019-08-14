@@ -1,20 +1,22 @@
 import React from 'react';
+import { useRoutes } from 'hookrouter';
+import routes from './routes'
 
-import { Header, Logo, Nav } from 'components'
-import { RequestPage } from 'modules'
+import { Layout, Header, Logo, Nav } from 'components'
 
 function App() {
+  const routeResult = useRoutes(routes);
 
   return (
-    <div className="App">
+    <Layout.App>
       <Header>
         <Logo />
       </Header>
 
-      <RequestPage />
+      { routeResult }
       
       <Nav />
-    </div>
+    </Layout.App>
   );
 }
 

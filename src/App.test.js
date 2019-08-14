@@ -30,8 +30,4 @@ describe('App integration', () => {
   it('contains Nav component', () => {
     expect(component.exists('Nav')).toBeTruthy()
   })
-
-  it('contains Request Page component', () => {
-    expect(component.exists('RequestPage')).toBeTruthy()
-  })
 })
