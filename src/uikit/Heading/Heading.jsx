@@ -5,11 +5,25 @@ import styles from './Heading.module.scss'
 const cn = classnames.bind(styles)
 
 const Heading = ({
-  children
+  type = 'h1',
+  size,
+  className,
+  children,
+  ...otherProps
 }) => {
-  return (
-    <h1 className={ cn('heading') }>{ children }</h1>
+  const classes = cn(
+    'heading',
+    size ? `size--${ size }` : `size--${ type }`,
+    className
   )
+
+  return React.createElement(type,
+		{
+      className: classes,
+      ...otherProps
+    },
+		children
+	)
 }
 
 export default Heading

@@ -1,3 +1,23 @@
 .button {
+  width: 230px;
+  height: 60px;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 60px;
+  color: #070707;
+  
+  text-align: center;
+
+  border: 0;
+  border-radius: 30px;
+  box-shadow: none;
+  
+  transition: background-color linear 0.2s;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: rgba(#eee, .9)
+  }
 }

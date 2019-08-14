@@ -5,9 +5,19 @@ import styles from './Button.module.scss'
 const cn = classnames.bind(styles)
 
 const Button = ({
-  children
+  type = 'button',
+  className,
+  children,
+  ...otherProps
 }) => {
-  return <button className={ cn('button') }>{ children }</button>
+  const classes = cn(
+    'button',
+    className
+  )
+
+  return (
+    <button type={ type } className={ classes } { ...otherProps }>{ children }</button>
+  )
 }
 
 export default Button

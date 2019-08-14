@@ -5,10 +5,17 @@ import styles from './Paragraph.module.scss'
 const cn = classnames.bind(styles)
 
 const Paragraph = ({
-  children
+  className,
+  children,
+  ...otherProps
 }) => {
+  const classes = cn(
+    'paragraph',
+    className
+  )
+
   return (
-    <p className={ cn('paragraph') }>{ children }</p>
+    <p className={ classes } { ...otherProps }>{ children }</p>
   )
 }
 
