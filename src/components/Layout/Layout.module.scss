@@ -1,0 +1,39 @@
+.layout {
+  &__app {
+    height: 100%;
+  }
+  
+  &__page {
+    position: relative;
+    padding: 30px 30px 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__socials {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+  &__cta {
+    align-self: center;
+    text-align: center;
+  }
+
+  &__partners {
+    margin-top: 50px;
+  }
+
+  &__description {
+    display: flex;
+    margin: 10px -20px 0;
+
+    &-item {
+      padding: 20px;
+      flex: 0 0 276px;
+    }
+  }
+}

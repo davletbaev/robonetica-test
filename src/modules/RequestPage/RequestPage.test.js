@@ -11,11 +11,11 @@ describe('RequestPage component', () => {
 describe('RequestPage integration', () => {
   let component
 
-  beforeEach(() => {
+  beforeAll(() => {
     component = mount(<RequestPage />)
   })
 
-  afterEach(() => {
+  afterAll(() => {
     component.unmount()
   })
 
