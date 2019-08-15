@@ -2,6 +2,7 @@
 
 html,
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -28,4 +29,11 @@ body {
 
 a {
   color: inherit;
+}
+
+@media (max-width: 1023px) {
+  html,
+  body {
+    height: auto;
+  }
 }
