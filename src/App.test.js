@@ -19,10 +19,6 @@ describe('App integration', () => {
     component.unmount()
   })
 
-  it('contains Header component', () => {
-    expect(component.exists('Header')).toBeTruthy()
-  })
-
   it('contains Request Page component', () => {
     expect(component.exists('Logo')).toBeTruthy()
   })
