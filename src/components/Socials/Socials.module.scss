@@ -25,3 +25,38 @@
     }
   }
 }
+
+@media (max-width: 1023px) {
+  .socials {
+    flex-direction: row;
+
+    &__item {
+      margin-top: 0;
+      margin-left: 26px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .socials {
+    flex-direction: column;
+
+    &__item {
+      margin-top: 13px;
+      margin-left: 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+      
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}

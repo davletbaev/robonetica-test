@@ -1,18 +1,26 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+
+import { Heading } from 'uikit'
+import { useWindowSize } from 'helpers'
 
 import * as Logos from './img'
 
 import styles from './Partners.module.scss'
 
 const Partners = () => {
+  const { isMobile } = useWindowSize()
+
   return (
-    <ul className={ styles['partners'] } >
-      { Object.values(Logos).map((Logo, idx) => (
-        <li key={ idx } className={ styles['partners__item'] }>
-          <Logo />
-        </li>
-      ) ) }
-    </ul>
+    <Fragment>
+      { isMobile && <Heading align="center">Partners:</Heading> }
+      <ul className={ styles['partners'] } >
+        { Object.values(Logos).map((Logo, idx) => (
+          <li key={ idx } className={ styles['partners__item'] }>
+            <Logo />
+          </li>
+        ) ) }
+      </ul>
+    </Fragment>
   )
 }
 

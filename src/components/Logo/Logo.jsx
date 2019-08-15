@@ -6,7 +6,7 @@ import { ReactComponent as LogoImage } from './Logo.svg'
 const Logo = () => {
   return (
     <div className={ styles['logo'] }>
-      <a href="/" title="Go to Beginning">
+      <a href="/" title="Go to Beginning" className={ styles['logo__link'] }>
         <LogoImage />
       </a>
     </div>
