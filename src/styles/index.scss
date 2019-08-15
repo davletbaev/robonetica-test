@@ -1,8 +1,7 @@
-@import 'fonts';
+@import './fonts';
 
 html,
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -25,4 +24,8 @@ body {
 
 #root {
   height: 100%;
+}
+
+a {
+  color: inherit;
 }
