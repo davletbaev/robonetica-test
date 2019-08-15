@@ -1,3 +1,69 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+  bottom: 0;
+  background-color: #0e0e0e;
+}
+
 .modal {
-  display: none;
+  height: 100%;
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    flex: 0 0 auto;
+  }
+
+  &__body {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &__footer {
+    flex: 0 0 auto;
+  }
+  
+  &__close {
+    padding: 0;
+
+    font-size: 30px;
+    line-height: 1;
+
+    color: #eee;
+    background: none;
+
+    box-shadow: none;
+    border: 0;
+
+    transition: color linear 0.2s;
+    outline: none;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: rgba(#eee, .8);
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .modal {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .modal {
+    padding: 15px;
+
+    &__close {
+      font-size: 16px;
+    }
+  }
 }
