@@ -3,10 +3,11 @@ import React from 'react'
 import styles from './Form.module.scss'
 
 const Form = ({
-  children
+  children,
+  ...otherProps
 }) => {
   return (
-    <form className={ styles['form'] }>{ children }</form>
+    <form className={ styles['form'] } { ...otherProps }>{ children }</form>
   )
 }
 

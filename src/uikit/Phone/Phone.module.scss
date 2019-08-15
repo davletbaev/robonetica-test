@@ -1,3 +1,10 @@
-.phone {
-  border: 0;
+.dropdown {
+    
+
+  &__button {
+    position: absolute;
+    top: auto !important;
+    right: 0;
+    height: 40px;
+  }
 }

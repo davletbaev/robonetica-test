@@ -1,5 +1,6 @@
 .form {
-  margin: 0;
+  max-width: 591px;
+  margin: 0 auto;
 }
 
 .field {
@@ -8,7 +9,7 @@
 }
 
 .group {
-  margin-top: 13px;
+  margin-top: 20px;
 
   &.is-row {
     display: flex;
@@ -22,7 +23,47 @@
     }
   }
 
+    
+  &.align--left {
+    text-align: left;
+    justify-content: flex-start;
+  }
+
+  &.align--right {
+      text-align: right;
+    justify-content: flex-end;
+  }
+
+  &.align--center {
+    text-align: center;
+    justify-content: center;
+  }
+
   &:first-child {
     margin-top: 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  .form {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .group {
+    &.is-row {
+      flex-direction: column;
+
+      .field {
+        margin-left: 0;
+        margin-top: 20px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+    }
   }
 }

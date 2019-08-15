@@ -1,3 +1,123 @@
-.input {
-  border: 0;
+.control {
+  display: block;
+  position: relative;
+
+  &__label {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 1.7em;
+    color: rgba(#F8F8F8, .4);
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    pointer-events: none;
+    transition:
+      top ease-in-out 0.2s;
+  }
+
+  &__error {
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    color: #FF5C00;
+    font-size: 14px;
+    line-height: 1;
+    pointer-events: none;
+  }
+
+  &__input {
+    padding: 15px 0 11px;
+    width: 100%;
+    font-size: 18px;
+    line-height: 25px;
+    background: none;
+    color: #eee;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    box-shadow: none;
+    outline: none;
+    transition: border-color ease-in-out 0.2s;
+
+    &--phone {
+      padding: 15px 36px 11px 0 !important;
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      + .control__label {
+        will-change: top;
+        top: -5px;
+      }
+    }
+  }
+  
+  &--error {
+    .control__input {
+      color: #FF5C00;
+    }
+  }
+
+  &:hover {
+    .control__input {
+      border-color: #eee;
+    }
+  }
+
+  ::placeholder { 
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  :-moz-placeholder {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  ::-moz-placeholder {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  :-ms-input-placeholder {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  ::-ms-input-placeholder {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  :-webkit-autofill,
+  :-webkit-autofill:hover, 
+  :-webkit-autofill:focus, 
+  :-webkit-autofill:active  {
+    -webkit-text-fill-color: #eee;
+      -webkit-box-shadow: 0 0 0 30px #0e0e0e inset !important;
+  }
+
+  ::-webkit-inner-spin-button, 
+  ::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+  }
+}
+
+@media (max-width: 767px) {
+  .control {
+    &__input {
+      padding: 10px 0 8px;
+      font-size: 16px;
+      line-height: 20px;
+
+      &--phone {
+        padding: 10px 36px 8px 0 !important;
+      }
+    }
+
+    &__label {
+      font-size: 12px;
+    }
+  }
 }

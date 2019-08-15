@@ -6,12 +6,14 @@ const cn = classnames.bind(styles)
 
 const Group = ({
 	row,
+	align = 'left',
 	children,
 	className
 }) => {
   const classes = cn(
     'group',
-    row && 'is-row',
+		row && 'is-row',
+		align && `align--${ align }`,
     className
   )
 
