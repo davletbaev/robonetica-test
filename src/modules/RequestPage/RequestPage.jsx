@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { Fragment, useState } from 'react'
 
 import { Layout, Socials, BackgroundVideo, Partners } from 'components'
-import { Heading, Button, Paragraph } from 'uikit'
+import { Heading, Button, Paragraph, Modal } from 'uikit'
+
+import { ModalContent } from './components'
 
 const RequestPage = () => {
+  const [ requestStatus, setRequestStatus ] = useState('waiting')
+
   return (
     <Layout.Page>
       <Layout.Socials>
@@ -14,7 +18,21 @@ const RequestPage = () => {
         <Heading>
           Welcome to Robonetica Community!<br /> Be ready for the next great mission!
         </Heading>
-        <Button>Join</Button>
+
+        <Modal.State>
+          { ({ isOpen, setModalOpen, setModalClose }) => (
+            <Fragment>
+              <Button onClick={ setModalOpen }>Join</Button>
+
+              <ModalContent
+                onClosed={ setModalClose }
+                setRequestStatus={ setRequestStatus }
+                requestStatus={ requestStatus }
+                isOpen={ isOpen }
+              />
+            </Fragment>
+          ) }
+        </Modal.State>
       </Layout.Cta>
 
       <Layout.Partners>
