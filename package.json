@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.0",
     "classnames": "^2.2.6",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
+    "express": "^4.17.1",
     "formik": "^1.5.8",
     "hookrouter": "^1.2.3",
     "node-sass": "^4.12.0",
@@ -13,9 +15,10 @@
     "react-background-video-player": "^1.1.6",
     "react-dom": "^16.8.6",
     "react-modal": "^3.9.1",
-    "react-phone-number-input": "^2.3.21",
+    "react-phone-input-mui": "^2.9.4",
     "react-scripts": "3.0.1",
-    "react-test-renderer": "^16.8.6"
+    "react-test-renderer": "^16.8.6",
+    "yup": "^0.27.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,5 +44,6 @@
   "devDependencies": {
     "jsdom": "^15.1.1",
     "jsdom-global": "^3.0.2"
-  }
+  },
+  "proxy": "http://localhost:8080"
 }
